@@ -4,12 +4,14 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Strona główna</title>
+    <title>Title</title>
 </head>
 <body>
-<h1 th:text="${welcomeMessage}">Hello John!</h1>
-<a th:if="${#authentication.isAuthenticated()}"
-   th:text="|Wyloguj się ${#authentication.name}|"
-   th:href="@{/logout}">Wyloguj się John</a>
+<div class="container">
+    <h1>Bezpieczna strona</h1>
+    <img src="src/main/resources/static/img/security.jpg" th:src="@{/img/security.jpg}" alt="Bezpieczna strona"/></br>
+    <a href="#" th:href="@{/secured}">Zabezpieczona strona</a>
+    <a href="#" th:href="@{/admin}">Panel admina</a>
+</div>
 </body>
 </html>
